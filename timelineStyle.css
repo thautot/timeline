@@ -1,0 +1,89 @@
+.timeline {
+  position: relative;
+  margin: 0vw 7vw 5vw 20vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline .cont {
+  --rayon-a: 1.5vw;
+  --rayon-b: 1vw;
+  --top: 1vw;
+  --left: -7vw;
+  --diff: calc(var(--rayon-a) - var(--rayon-b));
+  display: flex;
+  position: relative;
+  margin: 2vw 0;
+}
+
+.timeline .dateBox {
+  position: relative;
+  background-color: rgb(var(--gray-02));
+  border-radius: 1vw;
+  padding: 1.5vw 2.5vw;
+}
+
+.timeline .dateBox h5 {
+  font-size: 2vw;
+  font-weight: var(--regular);
+  margin-bottom: 0.5vw;
+}
+.timeline .dateBox p {
+  font-size: 1.5vw;
+  font-weight: var(--regular);
+}
+
+/* partie js */
+
+.timeline .cont::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: var(--left);
+  top: var(--top);
+  padding: var(--rayon-a);
+  border-radius: 50%;
+  background-color: rgb(var(--gray-02));
+}
+
+.timeline .going::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--left) + var(--diff));
+  top: calc(var(--top) + var(--diff));
+  padding: var(--rayon-b);
+  border-radius: 50%;
+  background-color: rgb(var(--blue));
+}
+
+.timeline .before::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--left) + var(--diff));
+  top: calc(var(--top) + var(--diff));
+  padding: var(--rayon-b);
+  border-radius: 50%;
+  background-color: rgb(var(--purple));
+}
+
+.timeline .passed::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--left) + var(--diff));
+  top: calc(var(--top) + var(--diff));
+  padding: var(--rayon-b);
+  border-radius: 50%;
+  background-color: rgb(var(--green));
+}
+
+.excuses {
+  padding-top: 2vw;
+  margin: 0 4vw;
+}
+
+.excuses p {
+  font-size: 2rem;
+  font-weight: var(--regular);
+  text-align: center;
+  margin: 2vw 3vw;
+}

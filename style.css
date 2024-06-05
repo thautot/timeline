@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  /* color */
+  /* grayish */
+  --gray-01: 242, 242, 242;
+  --gray-02: 229, 229, 229;
+  --gray-03: 216, 216, 216;
+  --gray-04: 202, 202, 202;
+  --gray-05: 188, 188, 188;
+  --gray-06: 174, 174, 174;
+  --gray-07: 159, 159, 159;
+  --darkest: 17, 17, 17;
+
+  /* rainbow */
+  --purple: 99, 66, 128;
+  --purple-matte: 92, 99, 148;
+  --blue-matte: 77, 128, 168;
+  --blue: 53, 154, 186;
+  --cyan: 63, 152, 154;
+  --green-matte: 70, 150, 121;
+  --green: 76, 148, 85;
+
+  /* others */
+  --background-main: 255, 255, 255;
+  --background-foot: var(--darkest);
+
+  /* font-weight */
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+}
+
+* {
+  color: var(--darkest);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-weight: var(--regular);
+}
+ul li {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", Arial;
+  font-size: 10px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  pointer-events: none;
+}
+
+h2 {
+  text-transform: uppercase;
+}
